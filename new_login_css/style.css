@@ -83,7 +83,7 @@ img {
 
 /*--- end reset code ---*/
 body {
-	background:url(../images/banner.jpg);
+	background:url(../images/loginBack2.jpg);
 	background-repeat:no-repeat;
 	background-attachment:fixed;
 	background-position:center;
@@ -96,7 +96,7 @@ body {
 }
 
 .header {
-	padding:50px 0;
+	padding:20px 0;
 }
 /*-- Agile ITS --*/
 .header h1 {
@@ -338,9 +338,10 @@ p.change_link{
 	position: absolute;
     top: 0px;
     width: 88%;
+	height: auto;
     padding: 18px 6% 80px 6%;
     margin: 0 0 35px 0;
-    background: rgba(0, 0, 255, 0.3);
+    background: rgba(26, 6, 0, 0.7);
 	/*background: rgba(0, 255, 0, 0.3);*/
     border: 1px solid rgba(156, 112, 112, 0.15);
 }

@@ -30,6 +30,7 @@ class LoginController extends CI_Controller{
                 'user_name' => $_POST['name'],
                 'email' => $_POST['email'],
                 'password' => MD5($_POST['password']),
+                'user_type' => 'CUSTOMER',
             );
 
             //Transferring data to Model
@@ -37,7 +38,7 @@ class LoginController extends CI_Controller{
             if($result)
             {
                 $this->load->helper('url');
-                $this->load->view('header/head1');
+                $this->load->view('header/head');
                 $this->load->view('banner/banner1');
                 $this->load->view('details/details');
                 $this->load->view('footer/footer1');
@@ -59,7 +60,7 @@ class LoginController extends CI_Controller{
         $this->load->library('session');
         $this->load->model('Users_Model');
 
-        $this->form_validation->set_rules('email_login', 'Email', 'trim|required',
+        $this->form_validation->set_rules('email_login', 'Email', 'trim|required|valid_email',
                                             array
                                             (
                                                 'required'      => 'You have not provided %s.'
@@ -75,12 +76,14 @@ class LoginController extends CI_Controller{
             $email_l = $_POST['email_login'];
             $password_l = md5($_POST['password_login']);
 
+
             $result  = $this->Users_Model->login($email_l,$password_l);
             if($result)
             {
                 $session_data=array(
                         'email'=>$result[0]->email,
-                        'username'=>$result[0]->user_name
+                        'username'=>$result[0]->user_name,
+                        'user_type' =>$result[0]->user_type,
                    );
 
                 //echo $result[0]->email;
@@ -88,7 +91,7 @@ class LoginController extends CI_Controller{
                 $this->session->set_userdata('logged_in',$session_data);
 
                 $this->load->helper('url');
-                $this->load->view('header/head1');
+                $this->load->view('header/head');
                 $this->load->view('banner/banner1');
                 $this->load->view('details/details');
                 $this->load->view('footer/footer1');
