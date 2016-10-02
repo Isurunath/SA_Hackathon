@@ -34,7 +34,7 @@
 </head>
 <body>
 <div class="header">
-    
+
 </div>
 <div class="content">
     <section>
@@ -44,7 +44,7 @@
             <div id="wrapper">
                 <div id="login" class="animate form">
 
-                    <div style="color:yellow; font-size: large;">
+                    <div style="color:red; font-size: large;">
                         <?php
                         if(isset($message))
                         {
@@ -59,7 +59,7 @@
                         if (validation_errors())
                         {
                             echo '<div id="validation_errors" title="Error:" align="left">';
-                            echo '<div class="response-msgs errors ui-corner-all"><span>Errors:</span><br /><ul><li>';
+                            echo '<div class="response-msgs errors ui-corner-all"><ul><li>';
                             echo validation_errors();
                             echo '</li></ul></div>';
                             echo '</div>';
@@ -73,11 +73,8 @@
                     <form name="login" autocomplete="on" action="<?php echo base_url(); ?>LoginController/login" method="post">
                         <h2>Login</h2>
                         <p>
-                            <label for="username" class="uname" data-icon="u" >Email or Username </label>
-                            <input id="email_login" name="email_login" type="text" placeholder="Enter email or password" value="<?php echo set_value("email_login")?>"/>
+                            <input id="email_login" name="email_login" type="text" placeholder="Enter email" value="<?php echo set_value("email_login")?>"/>
                         </p>
-                        <p>
-                            <label for="password" class="youpasswd" data-icon="p">Password </label>
                             <input id="password_login" name="password_login" type="password" placeholder="Enter password" />
                         </p>
 
@@ -95,20 +92,20 @@
                     <form name="register" action="<?php echo base_url(); ?>LoginController/register" autocomplete="off" method="post">
                         <h2> Sign up </h2>
                         <p>
-                            <label for="usernamesignup" class="uname" data-icon="u">Your username</label>
-                            <input id="name" name="name" type="text" placeholder="myusername690"/>
+
+                            <input id="name" name="name" type="text" placeholder="Enter Username"/>
                         </p>
                         <p>
-                            <label for="emailsignup" class="youmail" data-icon="e" > Your email</label>
-                            <input id="email" name="email" type="email" placeholder="mymail@mail.com"/>
+
+                            <input id="email" name="email" type="email" placeholder="Enter Email"/>
                         </p>
                         <p>
-                            <label for="passwordsignup" class="youpasswd" data-icon="p">Your password </label>
-                            <input type="password" id="password" name="password" placeholder="eg:password123!@#$%"/>
+
+                            <input type="password" id="password" name="password" placeholder="Enter Password"/>
                         </p>
                         <p>
-                            <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Please confirm your password </label>
-                            <input id="con_password" name="con_password" type="password" placeholder="eg:password123!@#$%"/>
+
+                            <input id="con_password" name="con_password" type="password" placeholder="Confirm Password"/>
                         </p>
                         <p class="signin button">
                             <input type="submit" value="Sign up"/>

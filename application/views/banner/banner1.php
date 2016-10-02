@@ -28,36 +28,29 @@
         </script>
 
         <div  id="top" class="callbacks_container">
-            <ul class="rslides" id="slider3">
-                <li>
-                    <div class="banner-info">
-                        <h3>You can download your assignments here</h3>
-                    </div>
-                </li>
-                <li>
-                    <div class="banner-info">
-                        <h3>Please submit your completed assignments on or before the relevant date</h3>
-                    </div>
-                </li>
-                <li>
-                    <div class="banner-info">
-                        <h3>You can download your assignments here</h3>
-                    </div>
-                </li>
-                <li>
-                    <div class="banner-info">
-                        <h3><b>Please submit your completed assignments on or before the relevant date</b></h3>
-                    </div>
-                </li>
-            </ul>
+            <div style="width: 100%; height: auto; background-color: rgba(0,0,0,0.5); margin-top: 150px;">
+                <ul class="rslides" id="slider3">
+                    <li>
+                        <div class="banner-info">
+                            <h3>Every Kind of Food at One Place..</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="banner-info">
+                            <h3>Experience the Food at Lowers Budget..</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="banner-info">
+                            <h3>Simply Place Your Order and Enjoy!</h3>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
 
-
-<div class="banner-bottom">
-    <h2 class="tittle">WELCOME TO Tryit</h2>
-</div>
 
 </body>
 </html>
