@@ -34,7 +34,7 @@
 </head>
 <body>
 <div class="header">
-    <h1>Tryit Login Form</h1>
+    
 </div>
 <div class="content">
     <section>
